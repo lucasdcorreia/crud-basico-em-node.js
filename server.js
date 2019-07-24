@@ -2,12 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb://admin:admin123@ds255107.mlab.com:55107/crud_tutorial";
+const uri = "mongodb://<usuário_do_banco>:<senha_para_acesso_ao_banco>@ds255107.mlab.com:55107/crud_tutorial";
 const ObjectId = require('mongodb').ObjectID;
 
 MongoClient.connect(uri, (err, client) => {
   if (err) return console.log(err);
-  db = client.db('crud_tutorial');
+  db = client.db('<nome_do_banco>');
 
   app.listen(3000, function () {
     console.log('server running on port 3000');
