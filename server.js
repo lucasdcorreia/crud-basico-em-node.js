@@ -1,8 +1,11 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
+
+const bodyParser = require('body-parser');
+
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb://admin:admin123@ds255107.mlab.com:55107/crud_tutorial";
+
 const ObjectId = require('mongodb').ObjectID;
 
 MongoClient.connect(uri, (err, client) => {
